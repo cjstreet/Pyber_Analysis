@@ -1107,11 +1107,7 @@ plt.show()
 plt.tight_layout()
 ``` 
 ![png](output_24_0.png)
-    
-
-    <Figure size 432x288 with 0 Axes>
-
-
+![ alt text for screen readers](/path/to/image. png "Text to show on mouseover")
 
 ```python
 
