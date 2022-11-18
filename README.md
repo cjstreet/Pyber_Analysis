@@ -31,24 +31,7 @@ pyber_data_df = pd.merge(ride_data_df, city_data_df, how="left", on=["city", "ci
 # Display the data table for preview
 pyber_data_df.head()
 ```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -111,30 +94,12 @@ pyber_data_df.head()
 </table>
 </div>
 
-
-
-
 ```python
 pyber_data_df.tail()
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -207,24 +172,8 @@ pyber_data_df.tail()
 total_rides = pyber_data_df.groupby("type").count()[["ride_id"]]
 total_rides
 ```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -253,32 +202,13 @@ total_rides
 </table>
 </div>
 
-
-
-
 ```python
 # 2. Get the total drivers for each city type
 total_drivers = ride_data_df.groupby("type").sum()[["driver_count"]]
 total_drivers
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -307,33 +237,14 @@ total_drivers
 </table>
 </div>
 
-
-
-
 ```python
 #  3. Get the total amount of fares for each city type
 total_fares = pyber_data_df.groupby("type").sum()[["fare"]]
 total_fares.rename(columns = {"fare": "Total Fares"}, inplace = True)
 total_fares
 ```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -361,9 +272,6 @@ total_fares
   </tbody>
 </table>
 </div>
-
-
-
 
 ```python
 #  4. Get the average fare per ride for each city type. 
@@ -372,24 +280,8 @@ avg_fare = pyber_data_df.groupby("type").mean()[["fare"]]
 avg_fare.rename(columns = {"fare": "Average Fare/Ride"}, inplace = True)
 avg_fare
 ```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -417,9 +309,6 @@ avg_fare
   </tbody>
 </table>
 </div>
-
-
-
 
 ```python
 # 5. Get the average fare per driver for each city type. 
@@ -428,23 +317,8 @@ avg_fare_driver = pd.DataFrame(total_fares["Total Fares"]/total_drivers["driver_
 avg_fare_driver
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -472,9 +346,6 @@ avg_fare_driver
   </tbody>
 </table>
 </div>
-
-
-
 
 ```python
 #  6. Create a PyBer summary DataFrame. 
@@ -483,23 +354,8 @@ pyber_summary_df = pd.concat(list_df, axis = 1)
 pyber_summary_df
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -548,32 +404,13 @@ pyber_summary_df
 </table>
 </div>
 
-
-
-
 ```python
 #  7. Cleaning up the DataFrame. Delete the index name
 pyber_summary_df.index.name = None
 pyber_summary_df
 ```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -613,9 +450,6 @@ pyber_summary_df
   </tbody>
 </table>
 </div>
-
-
-
 
 ```python
 #  8. Format the columns.
@@ -627,22 +461,8 @@ pyber_summary_df.rename(columns = {"ride_id": "Total Rides",
 ```
 
 
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -683,33 +503,13 @@ pyber_summary_df.rename(columns = {"ride_id": "Total Rides",
 </table>
 </div>
 
-
-
 ## Deliverable 2.  Create a multiple line plot that shows the total weekly of the fares for each type of city.
-
 
 ```python
 # 1. Read the merged DataFrame
 pyber_data_df
 ```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -827,33 +627,14 @@ pyber_data_df
 <p>2375 rows × 6 columns</p>
 </div>
 
-
-
-
 ```python
 # 2. Using groupby() to create a new DataFrame showing the sum of the fares 
 #  for each date where the indices are the city type and date.
 fare_dates_df = pyber_data_df.groupby(["type", "date"]).sum()[["fare"]]
 fare_dates_df
 ```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -920,32 +701,13 @@ fare_dates_df
 <p>2375 rows × 1 columns</p>
 </div>
 
-
-
-
 ```python
 # 3. Reset the index on the DataFrame you created in #1. This is needed to use the 'pivot()' function.
 fare_dates_df = fare_dates_df.reset_index()
 fare_dates_df
 ```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1027,9 +789,6 @@ fare_dates_df
 <p>2375 rows × 3 columns</p>
 </div>
 
-
-
-
 ```python
 # 4. Create a pivot table with the 'date' as the index, the columns ='type', and values='fare' 
 # to get the total fares for each type of city by the date. 
@@ -1038,23 +797,8 @@ fare_dates_pivot = fare_dates_df.pivot(index="date", columns="type", values="far
 fare_dates_pivot.head(10)
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1135,32 +879,14 @@ fare_dates_pivot.head(10)
 </table>
 </div>
 
-
-
-
 ```python
 # 5. Create a new DataFrame from the pivot table DataFrame using loc on the given dates, '2019-01-01':'2019-04-29'.
 dates_Jan_April = fare_dates_pivot.loc['2019-01-01':'2019-04-29']
 dates_Jan_April
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1248,16 +974,12 @@ dates_Jan_April
 <p>2196 rows × 3 columns</p>
 </div>
 
-
-
-
 ```python
 # 6. Set the "date" index to datetime datatype. This is necessary to use the resample() method in Step 8.
 dates_Jan_April = dates_Jan_April.reset_index()
 dates_Jan_April["date"] = pd.to_datetime(dates_Jan_April["date"])
 dates_Jan_April = dates_Jan_April.set_index(['date'])
 ```
-
 
 ```python
 # 7. Check that the datatype for the index is datetime using df.info()
@@ -1278,7 +1000,6 @@ dates_Jan_April.info()
     memory usage: 102.9 KB
 
 
-
 ```python
 # 8. Create a new DataFrame using the "resample()" function by week 'W' and get the sum of the fares for each week.
 week_rides_sum_df = dates_Jan_April.resample('W').sum()
@@ -1286,23 +1007,8 @@ week_rides_sum_df = week_rides_sum_df.drop(["level_0", "index"], axis = 1)
 week_rides_sum_df.head(10)
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1383,9 +1089,6 @@ week_rides_sum_df.head(10)
 </table>
 </div>
 
-
-
-
 ```python
 # 8. Using the object-oriented interface method, plot the resample DataFrame using the df.plot() function. 
 # Plot the resampled DataFrame.
@@ -1402,14 +1105,9 @@ weekly_fares.set_ylabel("Fares ($)")
 plt.savefig("Resources/fig8.png")
 plt.show()
 plt.tight_layout()
-```
-
-
-    
+``` 
 ![png](output_24_0.png)
     
-
-
 
     <Figure size 432x288 with 0 Axes>
 
