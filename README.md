@@ -2,9 +2,11 @@
 
 
 ## **Overview of the analysis:**
+
 The purpose of this analysis is to perform exploratory analysis and create visualizations on the Pyber data.
 
-Using Python scripts, the Pandas libraries, the Jupyter Notebook, and Matplotlib to create a variety of charts that showcase the relationship between the type of city and the number of drivers and riders, as well as the percentage of total fares, riders, and drivers by type of city. The analysis and visualizations you produce will help Pyber improve access to ridesharing services 
+Using Python scripts, the Pandas libraries, the Jupyter Notebook, and Matplotlib to create a variety of charts that showcase the relationship between the type of city and the number of drivers and riders, as well as the percentage of total fares, riders, drivers, and weekly fares by type of city. The analysis and visualizations will help Pyber improve access to ridesharing services. 
+
 ## **Results:**
 
 There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type. (7 pt)
@@ -12,7 +14,6 @@ There is a description of the differences in ride-sharing data among the differe
 ## **Summary:**
 
 There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
-
 
 
 ### **Importing the necessary libraries**
@@ -170,7 +171,7 @@ pyber_data_df.tail()
 </table>
 </div>
 
-## Deliverable 1: Get a Summary DataFrame 
+### Creating a Summary DataFrame of the Ride-Sharing Data by City Type
 
 ```python
 #  1. Get the total rides for each city type
@@ -411,7 +412,6 @@ pyber_summary_df.index.name = None
 pyber_summary_df
 ```
 <div>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -463,7 +463,6 @@ pyber_summary_df.rename(columns = {"ride_id": "Total Rides",
 
 
 <div>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -887,7 +886,6 @@ dates_Jan_April
 ```
 
 <div>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1009,7 +1007,6 @@ week_rides_sum_df.head(10)
 ```
 
 <div>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1110,8 +1107,6 @@ plt.tight_layout()
 
 
 ![png](Resources/fig8.png "Figure 8")
-
-
 
 
     <Figure size 432x288 with 0 Axes>
