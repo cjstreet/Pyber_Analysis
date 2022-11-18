@@ -3,17 +3,17 @@
 ## **Importing the necessary libraries**
 
 ```python
-# Add Matplotlib inline magic command
 %matplotlib inline
-# Dependencies and Setup
 import matplotlib.pyplot as plt
 import pandas as pd
-
+```
 ### **Loading the data**
+```python
 city_data_to_load = "Resources/ride_data.csv"
 ride_data_to_load = "Resources/city_data.csv"
-
+```
 # Read the City and Ride Data
+```python
 city_data_df = pd.read_csv(city_data_to_load)
 ride_data_df = pd.read_csv(ride_data_to_load)
 ```
