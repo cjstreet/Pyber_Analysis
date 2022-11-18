@@ -1106,8 +1106,7 @@ plt.savefig("Resources/fig8.png")
 plt.show()
 plt.tight_layout()
 ``` 
-![png](output_24_0.png)
-![ alt text for screen readers](/path/to/image. png "Text to show on mouseover")
+![png](Resources/fig8.png "Figure 8")
 
 ```python
 
