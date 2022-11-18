@@ -1106,9 +1106,14 @@ plt.savefig("Resources/fig8.png")
 plt.show()
 plt.tight_layout()
 ``` 
+
+
 ![png](Resources/fig8.png "Figure 8")
 
 
+
+
+    <Figure size 432x288 with 0 Axes>
 
 ```python
 
