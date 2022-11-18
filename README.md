@@ -1,23 +1,38 @@
 # **Pyber_Analysis**
 
-## **Importing the necessary libraries**
+
+## **Overview of the analysis:**
+The purpose of this analysis is to perform exploratory analysis and create visualizations on the Pyber data.
+
+Using Python scripts, the Pandas libraries, the Jupyter Notebook, and Matplotlib to create a variety of charts that showcase the relationship between the type of city and the number of drivers and riders, as well as the percentage of total fares, riders, and drivers by type of city. The analysis and visualizations you produce will help Pyber improve access to ridesharing services 
+## **Results:**
+
+There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type. (7 pt)
+
+## **Summary:**
+
+There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
+
+
+
+### **Importing the necessary libraries**
 
 ```python
 %matplotlib inline
 import matplotlib.pyplot as plt
 import pandas as pd
 ```
-## **Loading the data**
+### **Loading the data**
 ```python
 city_data_to_load = "Resources/ride_data.csv"
 ride_data_to_load = "Resources/city_data.csv"
 ```
-## Read the City and Ride Data
+### Read the City and Ride Data
 ```python
 city_data_df = pd.read_csv(city_data_to_load)
 ride_data_df = pd.read_csv(ride_data_to_load)
 ```
-## Merge the DataFrames
+### Merge the DataFrames
 
 ```python
 # Combine the data into a single dataset
