@@ -7,18 +7,17 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 ```
-### **Loading the data**
+## **Loading the data**
 ```python
 city_data_to_load = "Resources/ride_data.csv"
 ride_data_to_load = "Resources/city_data.csv"
 ```
-# Read the City and Ride Data
+## Read the City and Ride Data
 ```python
 city_data_df = pd.read_csv(city_data_to_load)
 ride_data_df = pd.read_csv(ride_data_to_load)
 ```
-
-### Merge the DataFrames
+## Merge the DataFrames
 
 ```python
 # Combine the data into a single dataset
