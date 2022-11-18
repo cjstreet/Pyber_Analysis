@@ -1,9 +1,6 @@
-# Pyber_Analysis
+# **Pyber_Analysis**
 
-# Pyber Challenge
-
-### 4.3 Loading and Reading CSV files
-
+## **Importing the necessary libraries**
 
 ```python
 # Add Matplotlib inline magic command
@@ -12,10 +9,9 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# File to Load (Remember to change these)
+### **Loading the data**
 city_data_to_load = "Resources/ride_data.csv"
 ride_data_to_load = "Resources/city_data.csv"
-
 
 # Read the City and Ride Data
 city_data_df = pd.read_csv(city_data_to_load)
@@ -24,11 +20,10 @@ ride_data_df = pd.read_csv(ride_data_to_load)
 
 ### Merge the DataFrames
 
-
 ```python
 # Combine the data into a single dataset
 pyber_data_df = pd.merge(ride_data_df, city_data_df, how="left", on=["city", "city"])
-# Display the data table for preview
+### **View the first and the last 5 rows of the dataset**
 pyber_data_df.head()
 ```
 <div>
@@ -99,7 +94,6 @@ pyber_data_df.tail()
 ```
 
 <div>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -162,10 +156,7 @@ pyber_data_df.tail()
 </table>
 </div>
 
-
-
 ## Deliverable 1: Get a Summary DataFrame 
-
 
 ```python
 #  1. Get the total rides for each city type
@@ -173,7 +164,6 @@ total_rides = pyber_data_df.groupby("type").count()[["ride_id"]]
 total_rides
 ```
 <div>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -281,7 +271,6 @@ avg_fare.rename(columns = {"fare": "Average Fare/Ride"}, inplace = True)
 avg_fare
 ```
 <div>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -318,7 +307,6 @@ avg_fare_driver
 ```
 
 <div>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -355,7 +343,6 @@ pyber_summary_df
 ```
 
 <div>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
