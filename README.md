@@ -1,7 +1,7 @@
 # **Pyber_Analysis**
 
 
-## **Overview of the analysis:**
+## **Overview:**
 
 The purpose of this analysis is to perform exploratory data analysis (EDA) and create visualizations on the Pyber data.
 
@@ -16,10 +16,9 @@ So, in general the urban areas have a higher demand for rides. Urban areas have 
 ## **Summary:**
 
 
-Business recommedations in the urban areas are to continue to hire and maintain a larger number of drivers to support the higher demand for rides. Spend more in urban areas to market to potential riders (customers) and drivers (employees) to attract both. 
+Business recommedations in the urban areas are to continue to hire and maintain a large number of drivers to support the higher demand for rides. Spend more in urban areas to market to potential riders (customers) and drivers (employees) to attract both. 
 
-There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
-
+More data needs to be collected regarding the need for rides in rural and suburban areas. Is there more of a market or not? Are there riders left waiting too long for rides? Is there a driver shortage? Are more rural and suburban citizens willing to use Pyber? Or is it just too expensive since they have to travel farther? This data needs to collected and analyzed to provide further recommendations on marketing and hiring strategies.
 
 ### **Importing the necessary libraries**
 
