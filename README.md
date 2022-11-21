@@ -1106,7 +1106,7 @@ plt.tight_layout()
 ``` 
 
 
-![png](Resources/fig8.png "Figure 8")
+![png](output_24_0.png "Figure 8")
 
 
     <Figure size 432x288 with 0 Axes>
