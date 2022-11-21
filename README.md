@@ -3,15 +3,20 @@
 
 ## **Overview of the analysis:**
 
-The purpose of this analysis is to perform exploratory analysis and create visualizations on the Pyber data.
+The purpose of this analysis is to perform exploratory data analysis (EDA) and create visualizations on the Pyber data.
 
 Using Python scripts, the Pandas libraries, the Jupyter Notebook, and Matplotlib to create a variety of charts that showcase the relationship between the type of city and the number of drivers and riders, as well as the percentage of total fares, riders, drivers, and weekly fares by type of city. The analysis and visualizations will help Pyber improve access to ridesharing services. 
 
 ## **Results:**
 
-There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type. (7 pt)
+The weekly fare is greatest for urban cities. This is most likely due to urban areas having the highest population of people and it is more convienient to use public transportation in an urban area. The next highest weekly fare was suburban cities. There are less people in the suburbs and they are more likely to have cars and commute to work. If people in the suburban areas require a ride then they typically have to travel a farther distance to work which results in a higher average fare per ride. Finally, rural cities had the lowest weekly fares. This is likely due to the low population and most people have their own vehicle. If rural citizens require a ride then they typically have to travel the farthest, which is a highest average fare per ride. 
+
+So, in general the urban areas have a higher demand for rides. Urban areas have the highest total rides, the most drivers, lowest average fare per ride, and they make the highest weekly fare. The suburban area is in the middle. The rural areas have the lowest total rides, the fewest drivers, the highest average fare per ride, and they make the lowest weekly fare.  
 
 ## **Summary:**
+
+
+Business recommedations in the urban areas are to continue to hire and maintain a larger number of drivers to support the higher demand for rides. Spend more in urban areas to market to potential riders (customers) and drivers (employees) to attract both. 
 
 There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
 
